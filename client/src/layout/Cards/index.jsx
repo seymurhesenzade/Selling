@@ -6,17 +6,13 @@ import { getAllData } from "../../assets/services";
 const { Meta } = Card;
 
 const Cards = () => {
-
-  const [product, setProduct] = useState(null);
-
+  const [Product, setProduct] = useState(null);
 
 useEffect(()=>{
-getAllData().then((res)=>{
-  setProduct(res.data.data)
-})
+  getAllData().then((res)=>{
+    setProduct(res.data.data);
+  })
 },[])
-
-
   return (
     <>
       <section id="card">
@@ -27,10 +23,9 @@ getAllData().then((res)=>{
 {/* CARD ---------------------------------------------------------------------- */}
 <div className="container">
 <Row gutter={16}>
-    {
-      product && product.map((p)=>{
-        return (
-          <Col className="gutter-row" span={6} key={p._id}>
+      {
+        Product && Product.map((p)=>{
+          return (<Col className="gutter-row" span={6} key={p._id}>
           <Card
         hoverable
         style={{
@@ -40,13 +35,11 @@ getAllData().then((res)=>{
       >
         <Meta title="Europe Street beat" description="www.instagram.com" />
       </Card>
-          </Col>
-        )
-      })
-    }
+          </Col>)
+        })
+      }
     </Row>
 </div>
-
       </section>
     </>
   )

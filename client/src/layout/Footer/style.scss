@@ -1,0 +1,50 @@
+footer {
+  display: flex;
+  margin-top: 100px;
+  .about {
+    p {
+      color: rgb(84, 84, 84);
+    }
+    width: 300px;
+  }
+  .links {
+    margin-left: 50px;
+    p {
+      color: rgb(84, 84, 84);
+    }
+  }
+  .follow {
+    margin-left: 50px;
+  }
+  .product {
+    margin-left: 300px;
+    img {
+      width: 250px;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 25px;
+      color: black;
+    }
+    button {
+      font-weight: 700;
+      background-color: black;
+      color: white;
+      width: 150px;
+      padding: 0.5rem;
+      cursor: pointer;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+.finish {
+    color: rgb(90, 89, 89);
+    padding: 5rem;
+    font-weight: 700;
+  text-align: center;
+}
